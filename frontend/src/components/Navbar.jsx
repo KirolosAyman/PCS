@@ -35,8 +35,8 @@ const NAV_ITEMS = [
   {
     label: 'API Integration',
     dropdown: [
-      { label: 'API Applications', icon: <Code size={16} /> },
-      { label: 'API Videos', icon: <PlayCircle size={16} /> }
+      { label: 'API Applications', icon: <Code size={16} />, href: '/api-applications' },
+      { label: 'API Videos', icon: <PlayCircle size={16} />, href: '/api-videos' }
     ]
   },
   {
@@ -121,13 +121,22 @@ export default function Navbar() {
                         whileHover={{ x: 6 }}
                         transition={{ type: "spring", stiffness: 300, damping: 20 }}
                       >
-                        <span style={{ cursor: 'default', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}>
-                          <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            {dropItem.icon && <span style={{ color: 'var(--clr-green-teal)', display: 'flex' }}>{dropItem.icon}</span>}
-                            {dropItem.label}
+                        {dropItem.href ? (
+                          <Link to={dropItem.href} className="dropdown-link" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px', width: '100%' }} onClick={closeMenu}>
+                            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                              {dropItem.icon && <span style={{ color: 'var(--clr-green-teal)', display: 'flex' }}>{dropItem.icon}</span>}
+                              {dropItem.label}
+                            </span>
+                          </Link>
+                        ) : (
+                          <span style={{ cursor: 'default', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}>
+                            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                              {dropItem.icon && <span style={{ color: 'var(--clr-green-teal)', display: 'flex' }}>{dropItem.icon}</span>}
+                              {dropItem.label}
+                            </span>
+                            {dropItem.subDropdown && <ChevronRight size={14} style={{ opacity: 0.5 }} />}
                           </span>
-                          {dropItem.subDropdown && <ChevronRight size={14} style={{ opacity: 0.5 }} />}
-                        </span>
+                        )}
 
                         {/* Sub Dropdown Menu */}
                         {dropItem.subDropdown && (
@@ -196,10 +205,17 @@ export default function Navbar() {
                       <div className="mobile-dropdown" style={{ paddingLeft: '1rem', marginTop: '0.5rem' }}>
                         {item.dropdown.map((dItem, dIdx) => (
                           <div key={dIdx} style={{ marginBottom: '0.5rem' }}>
-                            <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                              {dItem.icon && <span style={{ color: 'var(--clr-green-teal)' }}>{dItem.icon}</span>}
-                              {dItem.label}
-                            </span>
+                            {dItem.href ? (
+                              <Link to={dItem.href} onClick={closeMenu} style={{ textDecoration: 'none', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                {dItem.icon && <span style={{ color: 'var(--clr-green-teal)' }}>{dItem.icon}</span>}
+                                {dItem.label}
+                              </Link>
+                            ) : (
+                              <span style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                {dItem.icon && <span style={{ color: 'var(--clr-green-teal)' }}>{dItem.icon}</span>}
+                                {dItem.label}
+                              </span>
+                            )}
                             {dItem.subDropdown && (
                               <div style={{ paddingLeft: '1.5rem', marginTop: '0.25rem' }}>
                                 {dItem.subDropdown.map((sItem, sIdx) => (

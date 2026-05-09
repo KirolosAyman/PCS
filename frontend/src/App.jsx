@@ -6,6 +6,10 @@ import Features from './components/Features'
 import Footer from './components/Footer'
 import BackgroundAnimation from './components/BackgroundAnimation'
 import ContactPage from './components/ContactPage'
+import ChatbotWidget from './components/ChatbotWidget'
+import ApiIntegration from './components/ApiIntegration'
+import ApiVideos from './components/ApiVideos'
+
 
 function HomePage() {
   return (
@@ -25,8 +29,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/api-applications" element={<ApiIntegration />} />
+        <Route path="/api-videos" element={<ApiVideos />} />
       </Routes>
       <Footer />
+      <ChatbotWidget />
     </Router>
   )
 }
