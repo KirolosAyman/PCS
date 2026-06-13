@@ -1082,87 +1082,144 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   .chatbot-fab { padding: 14px; border-radius: 50%; }
 }
 /* =============================================
-   Light Theme Section overrides (About & Features)
+   ABOUT SECTION
+   Continues seamlessly from the dark Hero —
+   same deep navy family, slightly richer blue.
    ============================================= */
-.light-theme-section {
-  color: #1e293b !important;
+.about-section {
   position: relative;
+  background: linear-gradient(180deg, #010714 0%, #061938 45%, #0d2b5e 100%);
 }
 
-.light-theme-section::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ffffff;
-  z-index: -2;
-  pointer-events: none;
+.about-section h2,
+.about-section h3 {
+  color: #ffffff !important;
 }
 
-/* Ensure gradient text in light sections has a high-contrast dark gradient */
-.light-theme-section .gradient-text {
-  background: linear-gradient(90deg, #0044ff, #10b981) !important;
+.about-section p,
+.about-section .section-heading p {
+  color: rgba(255, 255, 255, 0.70) !important;
+}
+
+.about-section strong {
+  color: #ffffff !important;
+}
+
+.about-section .tagline {
+  color: #4ade80 !important;
+}
+
+.about-section .gradient-text {
+  background: linear-gradient(90deg, #ffffff, #3b9ede) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
 }
 
-.light-theme-section h2,
-.light-theme-section h3 {
+.about-section .glass-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+.about-section .glass-card:hover {
+  background: rgba(255, 255, 255, 0.09) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.55) !important;
+}
+
+.about-section .stat-card .stat-number {
+  background: linear-gradient(90deg, #4ade80, #3b9ede) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.about-section .stat-card .stat-label {
+  color: rgba(255, 255, 255, 0.50) !important;
+}
+
+.about-section .industry-chip span {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.about-section .accent-line {
+  background: linear-gradient(90deg, #4ade80, #3b9ede) !important;
+}
+
+
+/* =============================================
+   FEATURES SECTION – Gradient Bridge
+   Starts at the same deep navy as About's end,
+   then glides through corporate mid-blue into a
+   clean icy-white for the feature cards.
+   ============================================= */
+.features-section {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #0d2b5e  0%,
+    #0f3270  8%,
+    #1a4d9e  20%,
+    #2e6cbf  32%,
+    #6aaad8  45%,
+    #b8d8f0  56%,
+    #ddeeff  66%,
+    #eef5ff  78%,
+    #f6faff  90%,
+    #ffffff  100%
+  );
+}
+
+.features-section .section-heading h2 {
+  color: #ffffff !important;
+}
+
+.features-section .section-heading p {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.features-section .section-heading .gradient-text {
+  background: linear-gradient(90deg, #ffffff 0%, #4ade80 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.features-section .section-heading .accent-line {
+  background: linear-gradient(90deg, #4ade80, #3b9ede) !important;
+}
+
+.features-section .glass-card {
+  background: rgba(255, 255, 255, 0.86) !important;
+  border: 1px solid rgba(0, 68, 255, 0.10) !important;
+  box-shadow:
+    0 4px 24px rgba(0, 68, 255, 0.07),
+    0 1px 4px rgba(0, 0, 0, 0.05) !important;
+  color: #1e293b !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+.features-section .glass-card:hover {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border-color: rgba(0, 68, 255, 0.22) !important;
+  box-shadow:
+    0 16px 40px rgba(0, 68, 255, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.06) !important;
+}
+
+.features-section .glass-card h3 {
   color: #0f172a !important;
 }
 
-.light-theme-section p,
-.light-theme-section .section-heading p {
+.features-section .glass-card p {
   color: #475569 !important;
 }
 
-.light-theme-section strong {
-  color: #0f172a !important;
-}
-
-.light-theme-section .tagline {
-  color: #0d9488 !important; /* Keep green/teal tagline */
-}
-
-/* Override glass-card in light section to be a beautiful light card */
-.light-theme-section .glass-card {
-  background: #f8fafc !important;
-  border: 1px solid rgba(15, 23, 42, 0.08) !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
-  color: #1e293b !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-.light-theme-section .glass-card:hover {
-  background: #ffffff !important;
-  border-color: rgba(0, 68, 255, 0.2) !important;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
-}
-
-/* Stat card specific overrides */
-.light-theme-section .stat-card .stat-number {
-  background: linear-gradient(90deg, #0044ff, #3b9ede) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-}
-
-.light-theme-section .stat-card .stat-label {
-  color: #64748b !important;
-}
-
-/* Industry chip specific overrides */
-.light-theme-section .industry-chip span {
-  color: #334155 !important;
-}
-
-/* Features icons wrapper if needed */
-.light-theme-section .feature-icon-wrap {
+.features-section .feature-icon-wrap {
   background: var(--grad-btn-primary) !important;
-}
-
-/* Accent line */
-.light-theme-section .accent-line {
-  background: var(--grad-btn-primary) !important;
+  box-shadow: 0 4px 16px rgba(0, 68, 255, 0.35) !important;
 }
