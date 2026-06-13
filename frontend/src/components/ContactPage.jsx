@@ -74,8 +74,7 @@ export default function ContactPage() {
           >
             <div style={{ textAlign: 'center' }}>
               <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--accent-color)' }}>Call Us</h2>
-              <a href="tel:877-608-3536" style={{ color: 'var(--text-light)', textDecoration: 'none', fontSize: '1.2rem' }}>877-608-3536</a>
-            </div>
+<a href="tel:913-981-1100" style={{ color: 'var(--text-light)', textDecoration: 'none', fontSize: '1.2rem' }}>913-981-1100</a>            </div>
             <div style={{ textAlign: 'center' }}>
               <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', color: 'var(--accent-color)' }}>Email Us</h2>
               <a href="mailto:sales@pcsusa.com" style={{ color: 'var(--text-light)', textDecoration: 'none', fontSize: '1.2rem' }}>sales@pcsusa.com</a>
