@@ -38,7 +38,7 @@ function FadeInSection({ children, delay = 0 }) {
 
 export default function About() {
   return (
-<section id="about" className="section light-theme-section">        <div className="about-grid">
+<section id="about" className="section about-section">       <div className="about-grid">
           {/* ── Left: Text + Stats ── */}
           <FadeInSection delay={0}>
             <div className="about-text">
