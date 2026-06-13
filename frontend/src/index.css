@@ -1081,4 +1081,62 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
   .chatbot-fab-label { display: none; }
   .chatbot-fab { padding: 14px; border-radius: 50%; }
 }
+/* =============================================
+   Light Theme Section overrides (About & Features)
+   ============================================= */
+.light-theme-section {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  position: relative;
+  z-index: 1;
+}
 
+.light-theme-section h2,
+.light-theme-section h3 {
+  color: #0f172a !important;
+}
+
+.light-theme-section p,
+.light-theme-section .section-heading p {
+  color: #475569 !important;
+}
+
+.light-theme-section strong {
+  color: #0f172a !important;
+}
+
+.light-theme-section .tagline {
+  color: #0d9488 !important; /* Keep green/teal tagline */
+}
+
+/* Override glass-card in light section to be a beautiful light card */
+.light-theme-section .glass-card {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+  color: #1e293b !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.light-theme-section .glass-card:hover {
+  background: #ffffff !important;
+  border-color: rgba(0, 68, 255, 0.2) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Stat card specific overrides */
+.light-theme-section .stat-card .stat-number {
+  background: linear-gradient(90deg, #0044ff, #3b9ede) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.light-theme-section .stat-card .stat-label {
+  color: #64748b !important;
+}
+
+/* Industry chip specific overrides */
+.light-theme-section .industry-chip span {
+  color: #334155 !important;
