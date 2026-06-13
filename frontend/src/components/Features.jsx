@@ -63,8 +63,7 @@ const FEATURES = [
 
 export default function Features() {
   return (
-<section id="features" className="section light-theme-section">
-    <div className="section-wrap">
+<section id="features" className="section features-section">    <div className="section-wrap">
         <motion.div
           className="section-heading"
           initial={{ opacity: 0, y: 30 }}
