@@ -93,9 +93,10 @@ export default function Footer() {
             <h4>Contact</h4>
             <ul>
               <li>
-                <a href="tel:+18005550100" style={{ display:'flex', gap: 8, alignItems:'center' }}>
-                  <Phone size={14} style={{ color: 'var(--clr-green-teal)' }} />
-                  1-800-555-0100
+        <a href="tel:913-981-1100" style={{ display:'flex', gap: 8, alignItems:'center' }}>
+          <Phone size={14} style={{ color: 'var(--clr-green-teal)' }} />
+            913-981-1100
+                  </a>
                 </a>
               </li>
               <li>
