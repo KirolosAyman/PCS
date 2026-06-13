@@ -1085,10 +1085,25 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
    Light Theme Section overrides (About & Features)
    ============================================= */
 .light-theme-section {
-  background-color: #ffffff !important;
   color: #1e293b !important;
   position: relative;
-  z-index: 1;
+}
+
+.light-theme-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ffffff;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Ensure gradient text in light sections has a high-contrast dark gradient */
+.light-theme-section .gradient-text {
+  background: linear-gradient(90deg, #0044ff, #10b981) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
 }
 
 .light-theme-section h2,
@@ -1140,3 +1155,14 @@ h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
 /* Industry chip specific overrides */
 .light-theme-section .industry-chip span {
   color: #334155 !important;
+}
+
+/* Features icons wrapper if needed */
+.light-theme-section .feature-icon-wrap {
+  background: var(--grad-btn-primary) !important;
+}
+
+/* Accent line */
+.light-theme-section .accent-line {
+  background: var(--grad-btn-primary) !important;
+}
